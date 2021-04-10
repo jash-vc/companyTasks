@@ -4,7 +4,8 @@
   * HTML
   * CSS
   * SASS
-  * Javascript(Little_bit)
+  * Javascript(little_bit)
+  * Typescript(little_bit)
 
 #### Notes: - 
    * Here I use Node version(14.16.0) in all Projects excepts Mogo-free(psd) Task. in that Task i used  Node version(8.10.0). 
