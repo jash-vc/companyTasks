@@ -1,0 +1,275 @@
+html,
+body {
+    font-family: 'Montserrat' sans-serif;
+    background-color: #f5f6fa;
+}
+
+.banner {
+    padding-top: 600px;
+    color: white;
+}
+
+.first-banner {
+    background: url('../images/banner-2.jpg') no-repeat center center / cover;
+    height: 900px;
+}
+
+.second-banner {
+    background: url('../images/banner-3.jpeg') no-repeat center center / cover;
+    height: 900px;
+}
+
+h2.heading {
+    margin-bottom: 1px;
+    font-weight: 200;
+    font-size: 3rem;
+}
+
+span.bold-heading {
+    font-weight: 700;
+}
+
+span.end-symbol {
+    font-weight: 400;
+}
+
+h3.sub-heading {
+    font-weight: 300;
+    font-size: 2.5rem;
+}
+
+span.color-heading {
+    color: #0ba270;
+    font-weight: 600;
+}
+
+.content {
+    position: relative;
+    margin-bottom: 1%;
+}
+
+span.hr-line {
+    border-bottom: 3px solid #0ba270;
+    width: 40px;
+    display: inline-block;
+    margin: 0px 25px 3px 25px;
+}
+
+.social-icons {
+    padding-bottom: 4.5%;
+    margin-top: 1%;
+}
+
+.social-icons i {
+    padding: 10px;
+    color: gray;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.social-icons i:hover {
+    color: white;
+}
+
+#owl-carousel1 .owl-dots {
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#owl-carousel1 .owl-dots {
+    display: grid;
+    position: absolute;
+    top: 45%;
+    right: 2%;
+}
+
+.owl-theme .owl-nav {
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    margin: 0%;
+}
+
+#owl-carousel1 .owl-nav button.owl-next,
+#owl-carousel1 .owl-nav button.owl-prev {
+    background: 0 0;
+    color: inherit;
+    border: none;
+    padding: 0!important;
+    font: inherit;
+    font-size: 50px;
+    margin: 0px 15px;
+}
+
+#owl-carousel1 .owl-dots .active span {
+    background: white;
+}
+
+#owl-carousel1 .owl-nav span {
+    position: absolute;
+    color: white;
+}
+
+#owl-carousel1 .owl-prev span {
+    position: absolute;
+    top: -90px;
+}
+
+#owl-carousel1 .owl-next span {
+    position: absolute;
+    top: -90px;
+}
+
+.owl-dots button:focus {
+    outline: 0px auto -webkit-focus-ring-color;
+}
+
+
+/* second-slider */
+
+h3.feature-heading {
+    color: #43c2a4;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+span.fea-line {
+    border-bottom: 2px solid gray;
+    width: 70px;
+    opacity: 0.5;
+    display: inline-block;
+    margin: 0px 25px;
+}
+
+.item {
+    align-items: center;
+    background-color: tomato;
+    color: white;
+    display: flex;
+    height: 300px;
+    justify-content: center;
+}
+
+.item-box {
+    align-items: center;
+    display: flex;
+    height: auto;
+    position: relative;
+}
+
+.item-box i {
+    font-size: 20pt;
+    position: absolute;
+    top: 8%;
+}
+
+.item-box .content-box {
+    padding: 10px 10px 10px 40px;
+}
+
+.content-box h5 {
+    margin-bottom: 5%;
+}
+
+.content-box p {
+    margin: 0%;
+    font-size: 16px;
+}
+
+#owl-carousel2 .owl-nav {
+    visibility: hidden;
+}
+
+#owl-carousel2 .owl-dots .active span {
+    background: black;
+}
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 1199px) {
+    #owl-carousel1 .owl-nav button.owl-next,
+    #owl-carousel1 .owl-nav button.owl-prev {
+        font-size: 45px;
+    }
+    #owl-carousel1 .owl-prev span {
+        top: -75px;
+    }
+    #owl-carousel1 .owl-next span {
+        top: -75px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .banner {
+        padding-top: 400px;
+    }
+    #owl-carousel1 .owl-nav button.owl-next,
+    #owl-carousel1 .owl-nav button.owl-prev {
+        font-size: 40px;
+    }
+    #owl-carousel1 .owl-prev span {
+        top: -65px;
+    }
+    #owl-carousel1 .owl-next span {
+        top: -65px;
+    }
+    #owl-carousel1 .owl-dots {
+        display: inline-table;
+        position: absolute;
+        top: 88%;
+        left: 45%;
+    }
+    #owl-carousel1 .owl-prev span {
+        top: -55px;
+        display: none;
+    }
+    #owl-carousel1 .owl-next span {
+        top: -55px;
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .banner {
+        padding-top: 300px;
+        color: white;
+    }
+    .first-banner {
+        height: 700px;
+    }
+    .second-banner {
+        height: 700px;
+    }
+    #owl-carousel1 .owl-dots {
+        display: inline-table;
+        position: absolute;
+        top: 88%;
+        left: 45%;
+    }
+    #owl-carousel1 .owl-nav button.owl-next,
+    #owl-carousel1 .owl-nav button.owl-prev {
+        font-size: 35px;
+    }
+    #owl-carousel1 .owl-prev span {
+        top: -55px;
+        display: none;
+    }
+    #owl-carousel1 .owl-next span {
+        top: -55px;
+        display: none;
+    }
+    .social-icons {
+        padding-bottom: 10.5%;
+    }
+    h2.heading {
+        font-size: 2.5rem;
+    }
+    h3.sub-heading {
+        font-size: 1.75rem;
+    }
+    span.hr-line {
+        width: 30px;
+        margin: 0px 20px 3px 20px;
+    }
+}
