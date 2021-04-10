@@ -1,0 +1,86 @@
+/* .MuiTableCell-head {
+    color: rgba(0, 0, 0, 0.87);
+    line-height: 1.5rem;
+    background-color: #fff;
+    font-weight: 900;
+} */
+th.MuiTableCell-root.MuiTableCell-head.MuiTableCell-alignLeft.MuiTableCell-paddingNone {
+    font-weight: 700;
+    color: black;
+}
+th.MuiTableCell-root.MuiTableCell-head.MuiTableCell-alignLeft {
+    color: black;
+    font-weight: 600;
+}
+th.MuiTableCell-root.MuiTableCell-head.MuiTableCell-alignCenter {
+    color: black;
+    font-weight: 600;
+}
+tr.MuiTableRow-root.MuiTableRow-hover {
+    height: 65px;
+}
+tr.MuiTableRow-root.MuiTableRow-hover.Mui-selected {
+    background-color: rgba(34, 211, 238, 0.08)
+}
+span.MuiCheckbox-colorSecondary.Mui-checked {
+    color:#22d3ee;
+}
+::placeholder{
+    font-size:14px;
+}
+.MuiFormLabel-root.Mui-focused {
+    color:black;
+    outline: black;
+}
+span.MuiTypography-root.MuiCardHeader-title.MuiTypography-h5.MuiTypography-displayBlock {
+    display: flex;
+    font-size: 20px;
+    font-weight: 500;
+}
+span.MuiTypography-root.MuiCardHeader-subheader.MuiTypography-body1.MuiTypography-colorTextSecondary.MuiTypography-displayBlock {
+    position: absolute;
+    top: 17px;
+    right: 4%;
+    color:white;
+    font-weight: 500;
+    font-size: 14px;
+}
+.MuiTab-wrapper {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-transform: none;
+    font-size: 20px;
+    padding:2.5%;
+    letter-spacing: 1px;
+}
+.contentWrapper{
+    background-color: #f1f0ef;
+}
+*{
+    font-family: 'Poppins';
+}
+option:hover{
+    background-color: grey;
+}
+
+.MuiAvatar-root.MuiAvatar-circle {
+    width: 75px;
+    height: 63px;
+    border-radius: 30%;
+}
+/* For Tabbar */
+.MuiTabs-root {
+    display: flex;
+    overflow: hidden;
+    min-height: 48px;
+    -webkit-overflow-scrolling: touch;
+}
+span.MuiTabs-indicator {
+    color: black;
+    border-radius: 10px;
+    padding: 0%;
+    margin:0px;
+}
