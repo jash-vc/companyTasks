@@ -1,0 +1,414 @@
+html,
+body {
+    background-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    box-shadow: 0px 1px 5px rgb(128 128 128)
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.3s;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.tab button.active {
+    border-bottom: 3.5px solid #515a6c;
+}
+
+.tabcontent {
+    display: none;
+}
+
+.custom-input {
+    max-width: 75%;
+    height: 50px;
+}
+
+.form-control:focus {
+    color: #495057;
+    box-shadow: 0 0 0 0 rgb(255 255 255 / 25%);
+}
+
+.cc-back label {
+    display: block;
+}
+
+.checkbox-grp {
+    background-color: rgba(128, 128, 128, 0.1);
+    padding: 10px;
+    max-width: 75%;
+}
+
+.cc label::after {
+    content: "";
+}
+
+.drow {
+    padding: 8px 5px;
+}
+
+.drp-menus label {
+    display: block;
+}
+
+.heading h4 {
+    margin: 12px 0px;
+    font-weight: 800;
+}
+
+.heading a i {
+    margin-left: 50px;
+    margin-top: 10px;
+    color: black;
+    font-size: 20pt;
+    font-weight: 900;
+    transition: all 0.5s;
+}
+
+.collapsed .down-arrow {
+    transform: rotateZ(0deg);
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.radio-grp {
+    background-color: rgba(128, 128, 128, 0.1);
+    padding: 15px 15px;
+    max-width: 75%;
+    border-radius: 5px;
+}
+
+.radio-grp .rad-lab-1 {
+    margin: 0px 20px 0 10px;
+}
+
+.radio-grp .custom-input {
+    max-width: 75%;
+    height: auto;
+}
+
+.radio-grp label::after {
+    content: "";
+}
+
+label::after {
+    content: " *";
+    color: red;
+}
+
+.dropdown-menus>label {
+    margin-right: 85px;
+}
+
+#city-select {
+    width: 150px;
+    padding: 0.375rem 1.25rem 0.375rem 0.25rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    display: -webkit-box;
+}
+
+#state-select {
+    width: 150px;
+    padding: 0.375rem 1.25rem 0.375rem 0.25rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    display: -webkit-box;
+}
+
+#city-select2 {
+    padding: 0.375rem 1.2rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    display: inline-block;
+    width: auto;
+}
+
+#state-select2 {
+    padding: 0.375rem 1.2rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    display: inline-block;
+    width: auto;
+}
+
+.common-btn {
+    padding: 5px 40px;
+    color: black;
+    border: 1px solid black;
+    background-color: whitesmoke;
+    transition: all 1s;
+    margin: 1.5%;
+    opacity: 0.9;
+    font-weight: 600;
+    font-size: 14pt;
+}
+
+.common-btn:hover {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.14);
+}
+
+#cancel {
+    background-color: #ffe7d1;
+    color: #fe871b;
+    padding: 10px 50px;
+    border: none;
+}
+
+
+/* ==== Cancel Button Animation===== */
+
+#cancel:hover {
+    animation: cancelA 1s;
+    transition: 1s;
+    /* box-shadow: 0 0 2px 0 red inset, 0 0 5px 2px red; */
+}
+
+@keyframes cancelA {
+    0% {
+        transform: scale(1);
+    }
+    60% {
+        transform: scale(.85);
+        background-color: red;
+        color: white;
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#save {
+    background-color: #fe871b;
+    color: white;
+    padding: 10px 50px;
+    border: none;
+}
+
+#save {
+    color: #fff;
+    border: 3px solid #fe871b;
+    background-image: linear-gradient(30deg, #fe871b 50%, transparent 50%);
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    transition: 300ms ease-in-out;
+    background-color: #3bcf4f;
+    color: white;
+    padding: 10px 50px;
+    border: none;
+}
+
+#save:hover {
+    background-position: 100%;
+    color: white;
+}
+
+
+/*====== Multiple Select checkbox =====*/
+
+.mul-select-check label {
+    display: block;
+    color: black;
+}
+
+.mul-select-check option::after {
+    content: "";
+}
+
+
+/*=============== Upload Custom  ===========*/
+
+.custom-upload>label {
+    display: block;
+}
+
+.c-upload {
+    background-color: rgba(128, 128, 128, 0.1);
+    position: relative;
+    padding: 8px;
+}
+
+.c-upload label {
+    background-color: white;
+    color: black;
+    padding: 3px 10px;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    text-align: right;
+    position: absolute;
+    left: 55%;
+    top: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.c-upload label::after {
+    content: "";
+}
+
+
+/*======= Exta Inline Css ======= */
+
+.wrapper {
+    width: 70%;
+}
+
+.panel-heading {
+    padding: 0;
+    border: 0;
+}
+
+.panel-title>a,
+.panel-title>a:active {
+    display: block;
+    padding: 15px;
+    color: #555;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    text-decoration: none;
+}
+
+.panel-heading a:before {
+    font-family: 'Glyphicons Halflings';
+    content: "\e114";
+    float: right;
+    transition: all 0.5s;
+}
+
+.panel-heading.active a:before {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+
+/* ===== Media Query ==== */
+
+
+/*For Medium Range Devices  */
+
+@media only screen and (max-width: 1199px) {
+    .custom-input {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+    .checkbox-grp {
+        max-width: 100%;
+    }
+    .radio-grp {
+        background-color: rgba(128, 128, 128, 0.1);
+        max-width: 100%;
+        padding: 5px;
+    }
+    .radio-grp .rad-lab-1 {
+        margin: 0px;
+    }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        .c-upload label {
+            font-size: 14px;
+            padding: 3px 5px 3px 0px;
+        }
+    }
+}
+
+
+/* For Smalll Devices */
+
+@media only screen and (max-width: 767px) {
+    .custom-input {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+    .radio-grp {
+        max-width: 100%;
+        text-align: center;
+    }
+    .checkbox-grp {
+        max-width: 100%;
+        text-align: center;
+    }
+    .c-upload label {
+        left: 75%;
+        font-size: 1rem;
+        padding: 3px 10px;
+    }
+    #cancel {
+        background-color: #ffe7d1;
+        color: #fe871b;
+        padding: 10px 50px;
+        border: none;
+    }
+    #save {
+        background-color: #fe871b;
+        color: white;
+        padding: 10px 50px;
+        border: none;
+    }
+    .dropdown-menu1 {
+        margin: 0px 30px 0px 0px;
+    }
+    #city-select {
+        width: 100px;
+    }
+    #state-select {
+        width: 100px;
+    }
+    @media only screen and (max-width: 400px) {
+        .c-upload label {
+            left: 60%;
+        }
+    }
+    @media only screen and (max-width: 500px) {
+        .c-upload label {
+            left: 60%;
+        }
+    }
+}

@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Design</title>
+
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="description" content="School Form">
+    <meta name="keywords" content="">
+    <meta name="author" content="Jash Patel">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../bootstrap_4.0/css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-multiselect.css">
+
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="tab">
+            <button class="tablinks col-md-4" onclick="changeForm(event, 'myFrm1')" id="defaultOpen">Classes</button>
+            <button class="tablinks col-md-4" onclick="changeForm(event, 'myFrm2')">Divisions</button>
+            <button class="tablinks col-md-4" onclick="changeForm(event, 'myFrm3')">Teachers</button>
+        </div>
+    </header>
+
+    <!-- First Form -->
+    <div id="myFrm1" class="tabcontent">
+        <form class="myFrm-1 mt-2" id="" method="GET" action="">
+            <div class="container">
+                <div id="form-1" class="dynamic-form mb-2">
+                    <div class="row d-flex justify-content-start heading">
+                        <h4>School Information</h4>
+                    </div>
+                    <div class="form-row drow">
+                        <div class="no-gutters col-md-4">
+                            <label for="school">School Name</label>
+                            <input type="text" class="form-control custom-input" placeholder="First name">
+                        </div>
+                        <div class="radio-cls col-md-4">
+                            <label for="school-type">School Type</label>
+                            <div class="radio-grp">
+                                <div class="form-check-inline">
+                                    <label class="form-check-label rad-lab-1">
+                                        <input type="radio" class="form-check-input custom-input" name="optradio">Goverment
+                                    </label>
+                                </div>
+                                <div class="form-check-inline">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input custom-input" name="optradio">Private
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="school-esta">Established</label>
+                            <input type="text" class="form-control custom-input" placeholder="e.g. 1970">
+                        </div>
+                    </div>
+                    <div class="form-row drow">
+                        <div class="no-gutters col-md-4">
+                            <label for="school-reg">Lead Registration Number</label>
+                            <input type="number" class="form-control custom-input" placeholder="12586332">
+                        </div>
+                        <div class=" col-md-4">
+                            <label for="school-add">Address Line</label>
+                            <input type="text" class="form-control custom-input" placeholder="e.g. Anand">
+                        </div>
+                        <div class=" col-md-4 drp-menus d-flex">
+                            <div class="dropdown-menu1">
+                                <label for="school-city">City</label>
+                                <select name="cities" id="city-select" class="form-control custom-input ">
+                                    <option value="junagadh" selected disabled>Select</option>
+                                    <option value="junagadh"> Junagadh</option>
+                                    <option value="dog">Dog</option>
+                                    <option value="cat">Cat</option>
+                                    <option value="hamster">Hamster</option>
+                                    <option value="parrot">Parrot</option>
+                                    <option value="spider">Spider</option>
+                                    <option value="goldfish">Goldfish</option>
+                                </select>
+                            </div>
+                            <div class="dropdown-menu1">
+                                <label for="school-state">State</label>
+
+                                <select name="states" id="state-select" class="form-control custom-input">
+                                <option value="junagadh" selected disabled>Select</option>
+                                <option value="dog">Dog</option>
+                                <option value="cat">Cat</option>
+                                <option value="hamster">Hamster</option>
+                                <option value="parrot">Parrot</option>
+                                <option value="spider">Spider</option>
+                                <option value="goldfish">Goldfish</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row drow">
+                        <div class="no-gutters col-md-4">
+                            <label for="school-pincode">Pincode</label>
+                            <input type="number" class="form-control custom-input" placeholder="e.g. 356254">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="school-vision">Vision</label>
+                            <input type="text" class="form-control custom-input" placeholder="e.g. My Life my Rules">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="school-id">Date Id</label>
+                            <input type="number" class="form-control custom-input" placeholder="e.g. 23356123">
+                        </div>
+                    </div>
+                    <div class="form-row drow">
+                        <div class="no-gutters col-md-4 custom-upload">
+                            <label for="school-upload">File Upload</label>
+                            <input type="file" id="actual-btn" hidden />
+                            <div class="c-upload custom-input">
+                                <span id="file-chosen">No file chosen</span>
+                                <label class="" for="actual-btn">+ Choose File</label>
+                            </div>
+                        </div>
+
+                        <!-- check-box -->
+                        <div class="col-md-4">
+                            <div class="cc-back">
+                                <label for="school-admin-num">Department</label>
+                                <div class="checkbox-grp">
+                                    <div class="form-check form-check-inline cc">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                        <label class="form-check-label" for="inlineCheckbox1">Arts</label>
+                                    </div>
+                                    <div class="form-check form-check-inline cc">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                        <label class="form-check-label" for="inlineCheckbox2">Comm.</label>
+                                    </div>
+                                    <div class="form-check form-check-inline cc">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                                        <label class="form-check-label" for="inlineCheckbox3">Science</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- check-box-end -->
+
+                        <!-- Multi Select starts -->
+                        <div class="col-md-4 mul-select-check">
+                            <label for="school-subjects">Subjects Teach</label>
+                            <select id="multiple-checkboxes" multiple="multiple">
+                                    <option value="php">Maths</option>
+                                    <option value="javascript">Science</option>
+                                    <option value="java">Social Science</option>
+                                    <option value="sql">English</option>
+                                    <option value="jquery">Physics</option>
+                                    <option value=".net">Chemistry</option>
+                                    <option value="com">Computer</option>
+                                    <option value="ec">Economics</option>
+                                    <option value="st">Statatics</option>
+                                </select>
+                        </div>
+                    </div>
+                    <!-- Multi Select ends -->
+                </div>
+
+                <!-- Primary Contact -->
+                <div class="row d-flex justify-content-start heading">
+                    <h4>Primary Contact</h4>
+                </div>
+                <div class="form-row drow">
+                    <div class="no-gutters col-md-4">
+                        <label for="school-admin">Name of Admin</label>
+                        <input type="text" class="form-control custom-input" placeholder="e.g. Edward Cullen">
+                    </div>
+                    <div class="col-md-4">
+                        <label for="school-admin-num">Contact Number of Admin</label>
+                        <input type="text" class="form-control custom-input" placeholder="e.g. 9852364723">
+                    </div>
+                    <div class=" col-md-4">
+                        <label for="school-admin-email">Email ID</label>
+                        <input type="email" class="form-control custom-input" placeholder="e.g. edward@twilight.com">
+                    </div>
+                </div>
+                <!-- Type of School -->
+                <div class="row d-flex justify-content-start heading mt-2">
+                    <h4>Type Of School</h4>
+                    <button class="btn btn-link collapsed"><a data-toggle="collapse" href="#collapseExample" role="button"      aria-expanded="false" aria-controls="collapseExample">
+                            <i class="fa fa-angle-down down-arrow" id="arrow-ups"></i>
+                            </a>
+                        </button>
+                </div>
+                <div class="collapse" id="collapseExample">
+                    <div class="form-row drow">
+                        <div class="no-gutters col-md-4">
+                            <label for="school-trust">Company/Society/Trust Name</label>
+                            <input type="text" class="form-control custom-input" placeholder="e.g. Twilight">
+                        </div>
+                        <div class=" col-md-4">
+                            <label for="school-trust-id">Corporate Identification Number</label>
+                            <input type="text" class="form-control custom-input" placeholder="e.g. 65562361">
+                        </div>
+                        <div class=" col-md-4">
+                            <label for="school-trust-id">GST Identification Number</label>
+                            <input type="text" class="form-control custom-input" placeholder="e.g. 24536971666">
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex mt-3">
+                    <div class="col-md-12 text-center">
+
+                        <button type="button" class="btn btn-outline-danger common-btn">Cancel</button>
+                        <button type="button" class="btn btn-outline-success common-btn">Save</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- Second Form -->
+    <div id="myFrm2" class="tabcontent">
+        <form class="myFrm-1" id="" method="GET" action="">
+            <div class="container">
+                <div id="form-2" class="dynamic-form">
+                    <div class="row d-flex justify-content-start heading">
+                        <h4>School Information</h4>
+                    </div>
+                    <div class="form-row drow">
+                        <div class="no-gutters col-md-4">
+                            <label for="school">School Name</label>
+                            <input type="text" class="form-control custom-input" placeholder="First name">
+                        </div>
+                        <div class=" col-md-4">
+                            <label for="school-type">School Type</label><br>
+                            <div class="radio-grp">
+                                <div class="form-check-inline mr-4 ml-3">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input mr-2" name="optradio">Goverment
+                                    </label>
+                                </div>
+                                <div class="form-check-inline ">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input mr-2" name="optradio">Private
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-4">
+                            <label for="school-esta">Established</label>
+                            <input type="text" class="form-control custom-input" placeholder="e.g. 1970">
+                        </div>
+                    </div>
+                    <div class="form-row drow">
+                        <div class="no-gutters col-md-4">
+                            <label for="school-reg">Lead Registration Number</label>
+                            <input type="number" class="form-control custom-input" placeholder="12586332">
+                        </div>
+                        <div class=" col-md-4">
+                            <label for="school-add">Address Line</label>
+                            <input type="text" class="form-control custom-input" placeholder="e.g. Anand">
+                        </div>
+                        <div class=" col-md-4 drp-menus">
+                            <div class="dropdown-menus">
+                                <label for="school-city">City</label>
+                                <label for="school-state">State</label>
+                            </div>
+                            <select name="cities" id="city-select2" class="form-control custom-input">
+                                <option value="junagadh" selected> Junagadh</option>
+                                <option value="dog">Dog</option>
+                                <option value="cat">Cat</option>
+                                <option value="hamster">Hamster</option>
+                                <option value="parrot">Parrot</option>
+                                <option value="spider">Spider</option>
+                                <option value="goldfish">Goldfish</option>
+                            </select>
+
+                            <select name="states" id="state-select2" class="form-control custom-input">
+                                <option value="junagadh" selected> Junagadh</option>
+                                <option value="dog">Dog</option>
+                                <option value="cat">Cat</option>
+                                <option value="hamster">Hamster</option>
+                                <option value="parrot">Parrot</option>
+                                <option value="spider">Spider</option>
+                                <option value="goldfish">Goldfish</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row drow">
+                        <div class="no-gutters col-md-4">
+                            <label for="school-pincode">Pincode</label>
+                            <input type="number" class="form-control custom-input" placeholder="e.g. 356254">
+                        </div>
+                        <div class=" col-md-4">
+                            <label for="school-vision">Vision</label>
+                            <input type="text" class="form-control custom-input" placeholder="e.g. My Life my Rules">
+                        </div>
+                        <div class=" col-md-4">
+                            <label for="school-id">Date Id</label>
+                            <input type="number" class="form-control custom-input" placeholder="e.g. 23356123">
+                        </div>
+                    </div>
+                    <div class="form-row drow">
+                        <div class="no-gutters col-md-4">
+                            <label for="school-upload">File Upload</label>
+                            <input type="file" class="form-control file custom-input" id="school-upload2">
+                        </div>
+
+                        <!-- check-box -->
+                        <div class=" col-md-4">
+                            <div class="cc-back">
+                                <label for="school-admin-num">Department</label>
+                                <div class="checkbox-grp">
+                                    <div class="form-check form-check-inline cc">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option1">
+                                        <label class="form-check-label" for="inlineCheckbox1">Arts</label>
+                                    </div>
+                                    <div class="form-check form-check-inline cc">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option2">
+                                        <label class="form-check-label" for="inlineCheckbox2">Comm.</label>
+                                    </div>
+                                    <div class="form-check form-check-inline cc">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option3">
+                                        <label class="form-check-label" for="inlineCheckbox3">Science</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- check-box-end -->
+
+                    <div class=" col-md-4">
+
+                    </div>
+                </div>
+                <!-- Primary Contact -->
+
+                <div class="row d-flex justify-content-start heading">
+                    <h4>Primary Contact</h4>
+                </div>
+                <div class="form-row drow">
+                    <div class="no-gutters col-md-4">
+                        <label for="school-admin">Name of Admin</label>
+                        <input type="text" class="form-control custom-input" placeholder="e.g. Edward Cullen">
+                    </div>
+                    <div class=" col-md-4">
+                        <label for="school-admin-num">Contact Number of Admin</label>
+                        <input type="text" class="form-control custom-input" placeholder="e.g. 9852364723">
+                    </div>
+                    <div class=" col-md-4">
+                        <label for="school-admin-email">Email ID</label>
+                        <input type="email" class="form-control custom-input" placeholder="e.g. edward@twilight.com">
+                    </div>
+                </div>
+
+                <!-- Type of School -->
+
+                <div class="row d-flex justify-content-start heading">
+                    <h4>Type Of School</h4>
+                </div>
+                <div class="form-row drow">
+                    <div class="no-gutters col-md-4">
+                        <label for="school-trust">Company/Society/Trust Name</label>
+                        <input type="text" class="form-control custom-input" placeholder="e.g. Twilight">
+                    </div>
+                    <div class=" col-md-4">
+                        <label for="school-trust-id">Corporate Identification Number</label>
+                        <input type="text" class="form-control custom-input" placeholder="e.g. 65562361">
+                    </div>
+                    <div class=" col-md-4">
+                        <label for="school-trust-id">GST Identification Number</label>
+                        <input type="text" class="form-control custom-input" placeholder="e.g. 24536971666">
+                    </div>
+                </div>
+                <div class="row d-flex mt-3">
+                    <div class="col-md-12 text-center">
+                        <button type="button" class="btn common-btn" id="cancel">Cancel</button>
+                        <button type="button" class="btn common-btn" id="save">Save</button>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- Third Form -->
+    <div id="myFrm3" class="tabcontent">
+        <form class="myFrm-1" id="" method="GET" action="">
+            <div class="container">
+                <div id="form-3" class="dynamic-form">
+                    <div class="row d-flex justify-content-start heading">
+                        <h4>School Information</h4>
+                    </div>
+                    <div class="form-row drow">
+                        <div class="no-gutters col-md-4">
+                            <label for="school">School Name</label>
+                            <input type="text" class="form-control custom-input" placeholder="First name">
+                        </div>
+                        <div class=" col-md-4">
+                            <label for="school-type">School Type</label><br>
+                            <div class="radio-grp">
+                                <div class="form-check-inline mr-4 ml-3">
+                                    <label class="form-check-label">
+                                         <input type="radio" class="form-check-input mr-2" name="optradio">Goverment
+                                     </label>
+                                </div>
+                                <div class="form-check-inline ">
+                                    <label class="form-check-label">
+                                         <input type="radio" class="form-check-input mr-2" name="optradio">Private
+                                     </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-4">
+                            <label for="school-esta">Established</label>
+                            <input type="text" class="form-control custom-input" placeholder="e.g. 1970">
+                        </div>
+                    </div>
+                    <div class="form-row drow">
+                        <div class="no-gutters col-md-4">
+                            <label for="school-reg">Lead Registration Number</label>
+                            <input type="number" class="form-control custom-input" placeholder="12586332">
+                        </div>
+                        <div class=" col-md-4">
+                            <label for="school-add">Address Line</label>
+                            <input type="text" class="form-control custom-input" placeholder="e.g. Anand">
+                        </div>
+                        <div class=" col-md-4 drp-menus">
+                            <div class="dropdown-menus">
+                                <label for="school-city">City</label>
+                                <label for="school-state">State</label>
+                            </div>
+                            <select name="cities" id="city-select3" class="form-control custom-input">
+                                 <option value="junagadh" selected> Junagadh</option>
+                                 <option value="dog">Dog</option>
+                                 <option value="cat">Cat</option>
+                                 <option value="hamster">Hamster</option>
+                                 <option value="parrot">Parrot</option>
+                                 <option value="spider">Spider</option>
+                                 <option value="goldfish">Goldfish</option>
+                             </select>
+
+                            <select name="states" id="state-select3" class="form-control custom-input">
+                                 <option value="junagadh" selected> Junagadh</option>
+                                 <option value="dog">Dog</option>
+                                 <option value="cat">Cat</option>
+                                 <option value="hamster">Hamster</option>
+                                 <option value="parrot">Parrot</option>
+                                 <option value="spider">Spider</option>
+                                 <option value="goldfish">Goldfish</option>
+                             </select>
+                        </div>
+                    </div>
+                    <div class="form-row drow">
+                        <div class="no-gutters col-md-4">
+                            <label for="school-pincode">Pincode</label>
+                            <input type="number" class="form-control custom-input" placeholder="e.g. 356254">
+                        </div>
+                        <div class=" col-md-4">
+                            <label for="school-vision">Vision</label>
+                            <input type="text" class="form-control custom-input" placeholder="e.g. My Life my Rules">
+                        </div>
+                        <div class=" col-md-4">
+                            <label for="school-id">Date Id</label>
+                            <input type="number" class="form-control custom-input" placeholder="e.g. 23356123">
+                        </div>
+                    </div>
+                    <div class="form-row drow">
+                        <div class="no-gutters col-md-4">
+                            <label for="school-upload">File Upload</label>
+                            <input type="file" class="form-control file custom-input" id="school-upload3">
+                        </div>
+
+                        <!-- check-box -->
+                        <div class=" col-md-4">
+                            <div class="cc-back">
+                                <label for="school-admin-num">Department</label>
+                                <div class="checkbox-grp">
+                                    <div class="form-check form-check-inline cc">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="arts">
+                                        <label class="form-check-label" for="inlineCheckbox1">Arts</label>
+                                    </div>
+                                    <div class="form-check form-check-inline cc">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox8" value="commerce">
+                                        <label class="form-check-label" for="inlineCheckbox2">Comm.</label>
+                                    </div>
+                                    <div class="form-check form-check-inline cc">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox9" value="science">
+                                        <label class="form-check-label" for="inlineCheckbox3">Science</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- check-box-end -->
+
+                        <div class=" col-md-4">
+
+                        </div>
+                    </div>
+
+                    <!-- Primary Contact -->
+
+                    <div class="row d-flex justify-content-start heading">
+                        <h4>Primary Contact</h4>
+                    </div>
+                    <div class="form-row drow">
+                        <div class="no-gutters col-md-4">
+                            <label for="school-admin">Name of Admin</label>
+                            <input type="text" class="form-control custom-input" placeholder="e.g. Edward Cullen">
+                        </div>
+                        <div class=" col-md-4">
+                            <label for="school-admin-num">Contact Number of Admin</label>
+                            <input type="text" class="form-control custom-input" placeholder="e.g. 9852364723">
+                        </div>
+                        <div class=" col-md-4">
+                            <label for="school-admin-email">Email ID</label>
+                            <input type="email" class="form-control custom-input" placeholder="e.g. edward@twilight.com">
+                        </div>
+                    </div>
+
+                    <!-- Type of School -->
+
+                    <div class="row d-flex justify-content-start heading">
+                        <h4>Type Of School</h4>
+                    </div>
+                    <div class="form-row drow">
+                        <div class="no-gutters col-md-4">
+                            <label for="school-trust">Company/Society/Trust Name</label>
+                            <input type="text" class="form-control custom-input" placeholder="e.g. Twilight">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="school-trust-id">Corporate Identification Number</label>
+                            <input type="text" class="form-control custom-input" placeholder="e.g. 65562361">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="school-trust-id">GST Identification Number</label>
+                            <input type="text" class="form-control custom-input" placeholder="e.g. 24536971666">
+                        </div>
+                    </div>
+                    <div class="row d-flex mt-3">
+                        <div class="col-md-10 text-center">
+                            <button type="button" class="btn btn-outline-danger common-btn">Cancel</button>
+                            <button type="button" class="btn btn-outline-success common-btn">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-multiselect.js"></script>
+
+    <!--  -->
+    <script>
+        $('.panel-collapse').on('show.bs.collapse', function() {
+            $(this).siblings('.panel-heading').addClass('active');
+        });
+
+        $('.panel-collapse').on('hide.bs.collapse', function() {
+            $(this).siblings('.panel-heading').removeClass('active');
+        });
+    </script>
+
+    <!-- Multi-Select Menu -->
+    <script>
+        $(document).ready(function() {
+            $(".mul-select").select2({
+                placeholder: "select country", //placeholder
+                tags: true,
+                tokenSeparators: ['/', ',', ';', " "]
+            });
+        })
+    </script>
+
+    <!-- Multi-Select Checkbox -->
+    <script>
+        $(document).ready(function() {
+            $('#multiple-checkboxes').multiselect({
+                includeSelectAllOption: true,
+            });
+        });
+    </script>
+
+    <!-- Onclick Form Changes  -->
+    <script>
+        function changeForm(evt, form) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(form).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        document.getElementById("defaultOpen").click();
+    </script>
+
+    <!-- Custom file upload -->
+    <script>
+        const actualBtn = document.getElementById('actual-btn');
+
+        const fileChosen = document.getElementById('file-chosen');
+
+        actualBtn.addEventListener('change', function() {
+            fileChosen.textContent = this.files[0].name
+        })
+    </script>
+</body>
+
+</html>
