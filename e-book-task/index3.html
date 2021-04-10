@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>E-book2</title>
+
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="description" content="E-book-form">
+    <meta name="keywords" content="">
+    <meta name="author" content="Jash Patel">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style3.css">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="./assets/fonts/Poppins/stylesheet.css">
+
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+    Launch demo modal
+</button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex align-items-center justify-content-center" id="back-form-wrapper">
+                        <div class="col-md-8 col-sm-12 col-12 align-items-center form-wrapper " id="e-book">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12 col-12 left-form">
+                                    <div class="content">
+                                        <h2 class="heading mb-4">
+                                            Download Your<br>Free E-book.
+                                        </h2>
+                                        <p class="para mb-4">
+                                            Download a free copy of our newest e-book on "How to Create The Perfect Sleeknote".
+                                        </p>
+                                    </div>
+                                    <form class="login-form" id="myFrm" method="GET">
+                                        <input type="text" class="form-control c-input" placeholder="Enter your name...">
+                                        <input type="email" class="form-control c-input" placeholder="Enter Your Email">
+                                        <div class="form-check">
+                                            <input class="form-check-input position-static c-checkbox" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."><label class="c-label">I agree
+to <a href="second.html" target="_blank">terms and conditions.</a></label>
+                                        </div>
+                                        <div class="mt-2 d-flex down-option mobile-set">
+                                            <div class="icon-download d-inline-block"><a href="assets/images/airplane (1).jpg" download><i class="fa fa-arrow-circle-o-down"></i></a></div>
+                                            <div class="text d-flex"><a href="assets/images/airplane (1).jpg" download alt="airplane-svg">Download E-book</a></div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-md-6 col-sm-12 col-12 right-form ">
+                                    <div class="custom-box col-5 align-items-center" id="back-custom">
+                                        <p>insert-your own book cover</p>
+                                    </div>
+                                    <div class="custom-box-2">
+                                        <img src="assets/images/airplane (1).svg" class="img1" alt="plane-img">
+                                        <h4>How to create the perfect sleeknote</h4>
+                                        <p>Turn visitors kite load</p>
+                                        <img src="assets/images/cloud-computing (1).svg" class="img2" alt="cloud-img">
+                                    </div>
+                                    <div class="cancel-class">
+                                        <i class="fa fa-times" onclick="disappear()"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script>
+        $('#myModal').on('shown.bs.modal', function() {
+            $('#myInput').trigger('focus')
+        })
+    </script>
+</body>
+
+</html>

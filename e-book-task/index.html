@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>E-book</title>
+
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="description" content="E-book-form">
+    <meta name="keywords" content="">
+    <meta name="author" content="Jash Patel">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="./assets/fonts/Poppins/stylesheet.css">
+
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row d-flex">
+            <div class="col-12 pt-3 text-center">
+                <button class="btn btn-success" onclick="openForm()" id="btn">Download Book</button>
+            </div>
+            <div class="col-10 form-div" id="e-book">
+                <div class="row">
+                    <div class="col-6 left-form">
+                        <div class="content">
+                            <h2 class="heading mb-4">
+                                Download Your<br>Free E-book.
+                            </h2>
+                            <p class="para mb-4">
+                                Download a free copy of our newest e-book on "How to Create The Perfect Sleeknote".
+                            </p>
+                        </div>
+                        <form class="login-form" id="myFrm" method="GET">
+                            <input type="text" class="form-control c-input" placeholder="Enter your name...">
+                            <input type="email" class="form-control c-input" placeholder="Enter Your Email">
+                            <div class="form-check">
+                                <input class="form-check-input position-static c-checkbox" type="checkbox" id="blankCheckbox" value="option1" aria-label="..."><label class="c-label">I agree to <a href="second.html" target="_blank">terms and conditions.</a></label>
+                            </div>
+                            <div class="mt-2 d-flex down-option">
+                                <div class="icon-download d-inline-block"><a href="assets/images/airplane (1).jpg" download><i class="fa fa-arrow-circle-o-down"></i></a></div>
+                                <div class="text d-flex"><a href="assets/images/airplane (1).jpg" download>Download
+                                        E-book</a></div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-6 right-form">
+                        <div class="custom-box col-4 align-items-center">
+                            <p>insert-your own book cover</p>
+                        </div>
+                        <div class="custom-box-2">
+                            <img src="assets/images/airplane (1).svg" class="img1">
+                            <h4>How to create the perfect sleeknote</h4>
+                            <p>Turn visitors kite load</p>
+                            <!-- <img src="assets/images/cloud-computing (1).svg" class="img2"> -->
+                        </div>
+                        <div class="cancel-class">
+                            <i class="fa fa-times" onclick="disappear()"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openForm() {
+            document.getElementById("e-book").style.display = "block";
+            document.getElementById("btn").style.display = "none";
+        }
+
+        function disappear() {
+            document.getElementById("e-book").style.display = "none";
+            document.getElementById("btn").style.display = "inline-block";
+        }
+    </script>
+</body>
+
+</html>

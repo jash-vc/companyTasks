@@ -1,0 +1,4 @@
+*.jpg
+*.png
+/images/*
+/node_modules/*
