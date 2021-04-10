@@ -1,0 +1,118 @@
+/*==================== Blog ===============*/
+
+#stories {
+    .cursive-title {
+        font-family: $font-Kaushan;
+    }
+    .hdivide2 {
+        height: 2%;
+        width: 8%;
+        display: inline-flex;
+        border-top: 3px solid $color-red;
+    }
+    .blog-image {
+        position: relative;
+        margin-bottom: 20px;
+        img {
+            border: none;
+            max-width: 100%;
+            width: 100%;
+        }
+        .date {
+            position: absolute;
+            background: $color-common;
+            left: -10px;
+            bottom: 10px;
+            padding: 10px 15px;
+            color: $color-white;
+            text-align: center;
+            .numbr {
+                display: block;
+                font-size: 25px;
+                line-height: 100%;
+                font-weight: 700;
+                font-family: $font-Montserrat;
+                color: $color-white;
+            }
+            .month {
+                display: block;
+                font-weight: 300;
+                font-style: italic;
+                font-size: 14px;
+                color: $color-white;
+            }
+        }
+    }
+    .blog-head {
+        font-size: 14px;
+        color: $color-black;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+    .blog-content {
+        margin-left: 5px;
+    }
+    .blog-icon {
+        font-style: italic;
+        font-size: 14px;
+        padding: 0px;
+        i {
+            color: $color-common;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    /*==================== Blog ===============*/
+    #stories {
+        .blog-image {
+            position: relative;
+            margin-bottom: 15px;
+            text-align: center;
+            .date {
+                left: -10px;
+                bottom: 10px;
+                padding: 8px 10px;
+                .numbr {
+                    display: block;
+                    font-size: 20px;
+                    font-weight: 700;
+                    color: $color-white;
+                }
+                .month {
+                    font-size: 12px;
+                }
+            }
+        }
+        .blog-head {
+            font-size: 13px;
+            text-align: center;
+        }
+        .blog-content {
+            margin-left: 5px;
+        }
+        .blog-icon {
+            padding: 1% 35% 1% 35%;
+            i {
+                color: $color-common;
+            }
+        }
+        .responsive {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    #stories {
+        .blog-image {
+            .date {
+                position: absolute;
+                background: $color-common;
+                left: -10px;
+                bottom: 10px;
+                padding: 8px 12px;
+            }
+        }
+    }
+}

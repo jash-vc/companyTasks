@@ -1,0 +1,66 @@
+/*================= Services ==================*/
+
+#work-with {
+    font-style: normal;
+    .cursive-title {
+        font-family: $font-Kaushan;
+    }
+    .hdivide2 {
+        height: 2%;
+        width: 8%;
+        display: inline-flex;
+        border-top: 3px solid $color-red;
+    }
+    .service-box {
+        position: relative;
+        padding: 10px 2px 50px 2px;
+        min-height: 20%;
+        margin: 20px 0;
+        .service-image {
+            position: absolute;
+            top: 10px;
+        }
+        .service-content {
+            position: absolute;
+            margin-left: 60px;
+            h5 {
+                font-size: 11pt;
+                padding: 0px;
+                font-weight: 300;
+            }
+        }
+    }
+    hr {
+        margin-top: 4rem;
+        margin-bottom: 0rem;
+    }
+}
+
+@media (max-width:767px) {
+    #work-with {
+        font-style: normal;
+        .service-box {
+            position: relative;
+            padding: 10px 2px 50px 2px;
+            min-height: 20%;
+            margin: 20px 0;
+            .service-image {
+                position: absolute;
+                top: 10px;
+                left: 5%;
+            }
+            .service-content {
+                position: absolute;
+                margin-left: 20%;
+                h5 {
+                    font-size: 11pt;
+                    padding: 0px;
+                    font-weight: 300;
+                }
+            }
+        }
+        hr {
+            margin-top: 1rem;
+        }
+    }
+}

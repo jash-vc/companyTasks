@@ -1,0 +1,43 @@
+    /*================= Stats ==================*/
+    
+    #stats {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 14px;
+        background-color: $color-common;
+        .box {
+            min-width: 20%;
+            padding: 35px 5px;
+            border-right: 1px solid $stats-box;
+            display: inline-block;
+            &:first-child {
+                border-left: 1px solid $stats-box;
+            }
+            .num {
+                font-size: 50pt;
+                color: $color-white;
+                font-weight: 700;
+                margin-bottom: 7px;
+            }
+            .description {
+                color: $color-white;
+                font-weight: 500;
+            }
+        }
+    }
+    
+    @media (max-width: 767px) {
+        /*===== Stats Section =====*/
+        #stats {
+            font-size: 11px;
+            .box {
+                padding: 30px 5px;
+                .num {
+                    font-size: 25pt;
+                }
+                &:first-child {
+                    border-left: 1px solid $stats-box;
+                }
+            }
+        }
+    }

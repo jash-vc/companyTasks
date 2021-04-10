@@ -1,0 +1,88 @@
+/*========================= Header =================================*/
+
+#nav-bar {
+    position: relative;
+    max-width: 100%;
+    background-size: cover;
+    z-index: 1000;
+    position: fixed;
+    background: $nav-bar-back;
+    min-width: 100%;
+    z-index: 999;
+    /*=========== Navigation Buttons ================*/
+    .nav-item {
+        li {
+            font-weight: 500;
+        }
+        a {
+            padding: 2px;
+            transition: 0.5s;
+            text-transform: uppercase;
+            font-weight: 500;
+            color: $color-white;
+            font-size: 12px;
+            .icons {
+                color: $color-white;
+                font-size: 12px;
+            }
+        }
+        &:hover {
+            border-bottom: 2px solid $color-yellow;
+            color: $color-yellow;
+        }
+    }
+}
+
+// .menubar {
+//     margin-left: 20px;
+// }
+@media (min-width: 1200px) and (max-width:1299px) {
+    #navbarNav {
+        a {
+            padding: 0px;
+            margin: 0px;
+        }
+    }
+}
+
+
+/* Medium Devices */
+
+@media (min-width: 992px) and (max-width:1199px) {
+    #navbarNav {
+        a {
+            padding: 0px;
+            margin: 0px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #nav-bar {
+        position: relative;
+        max-width: 100%;
+        background-size: cover;
+        z-index: 1000;
+        a {
+            float: right;
+            display: block;
+        }
+        &:not(:first-child) {
+            display: none;
+        }
+        .responsive {
+            position: relative;
+            .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+    }
+    .cursive-title {
+        font-size: 13pt;
+    }
+    // .menubar {
+    //     overflow: hidden;
+    // }
+}

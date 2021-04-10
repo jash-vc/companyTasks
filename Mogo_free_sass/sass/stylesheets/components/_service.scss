@@ -1,0 +1,193 @@
+/*=============== What we do ==================*/
+
+#service {
+    .service-part1 {
+        .cursive-title {
+            font-family: $font-Kaushan;
+        }
+        .hdivide2 {
+            height: 2%;
+            width: 8%;
+            display: inline-flex;
+            border-top: 3px solid $color-red;
+        }
+        .img-service {
+            img {
+                border: none;
+                max-width: 100%;
+            }
+        }
+        #accordion {
+            .my-accordian {
+                margin-bottom: 5px;
+                .icon-acordian {
+                    font-size: 25px;
+                    position: absolute;
+                    margin-left: -15px;
+                    color: $color-common;
+                }
+                .icon-caption {
+                    margin-left: 30px;
+                    font-weight: 300;
+                    font-size: 14px;
+                }
+                button {
+                    .down-arrow {
+                        color: $accordian-arrow;
+                        transition: transform 0.5s;
+                        transform: rotateZ(180deg);
+                        position: absolute;
+                        right: 40px;
+                        font-size: 30px;
+                        top: 10px;
+                    }
+                    .collapsed {
+                        .down-arrow {
+                            transform: rotateZ(0deg);
+                        }
+                    }
+                }
+            }
+            .custom-card {
+                font-size: 13px;
+                height: 200px;
+                overflow-y: scroll;
+                font-style: italic;
+            }
+        }
+    }
+    /*===== For Scrollbar ======*/
+    /* width */
+     ::-webkit-scrollbar {
+        width: 5px;
+    }
+    /* Track */
+     ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px $service-scroll-box;
+        border-radius: 10px;
+    }
+    /* Handle */
+     ::-webkit-scrollbar-thumb {
+        background: $color-common;
+        border-radius: 15px;
+        transition: all .75 ease;
+        &:hover {
+            background: $service-scroll2;
+        }
+    }
+}
+
+
+/*=============== Slider ==================*/
+
+#slider-1 {
+    background-color: $slider-back;
+    background-size: cover;
+    font-size: 16px;
+    padding: 10px 5px;
+    display: flex;
+    #slider-message {
+        position: relative;
+        .slider-image {
+            position: absolute;
+            top: 3%;
+            left: 5%;
+        }
+        .slider-content {
+            position: absolute;
+        }
+        .message {
+            padding: 20px 10px 20px 10px;
+            margin: 1%;
+            img {
+                margin: 10px 50px;
+            }
+            p {
+                font-style: italic;
+                font-size: 15px;
+            }
+        }
+        .author {
+            margin-top: -4%;
+            margin-left: -16%;
+            opacity: 0.7;
+            p {
+                margin-left: 15%;
+                margin-top: -6%;
+                font-family: $font-Kaushan;
+                font-size: 18px;
+            }
+        }
+        .carousel-control-prev {
+            span {
+                color: $carousel-icon;
+                margin-left: -180px;
+                font-size: 25px;
+            }
+        }
+        .carousel-control-next {
+            span {
+                color: $carousel-icon;
+                margin-left: 100px;
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    #service {
+        .img-service {
+            img {
+                margin-bottom: 2rem;
+            }
+        }
+        .my-accordian {
+            margin-left: 5px;
+            margin-bottom: 5px;
+            .icon-caption {
+                font-weight: 300;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    /* Slider below accordian */
+    #slider-1 {
+        #slider-message {
+            .message {
+                p {
+                    font-style: italic;
+                    font-size: 11px;
+                }
+                img {
+                    display: none;
+                }
+            }
+            .carousel-control-prev {
+                span {
+                    color: $carousel-icon;
+                    margin-left: -0px;
+                    font-size: 25px;
+                }
+            }
+            .carousel-control-next {
+                span {
+                    color: $carousel-icon;
+                    margin-left: 00px;
+                    font-size: 25px;
+                }
+            }
+            .author {
+                p {
+                    margin-left: 28%;
+                    margin-top: -12%;
+                    font-family: $font-Kaushan;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}

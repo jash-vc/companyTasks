@@ -1,0 +1,52 @@
+/*================= all Devices ==================*/
+
+#unique-device {
+    /* For Change Opacity Of Image*/
+    background: linear-gradient($unique-device-back1, $unique-device-back2), url("../images/unique_design_back.png") no-repeat center center / cover;
+    position: relative;
+    .cursive-title {
+        font-family: $font-Kaushan;
+    }
+    .hdivide2 {
+        height: 2%;
+        width: 8%;
+        display: inline-flex;
+        border-top: 3px solid $color-red;
+    }
+    #big1 {
+        border: none;
+        max-width: 100%;
+    }
+    #small1 {
+        position: absolute;
+        top: 40%;
+        left: 80%;
+        max-width: 232PX;
+    }
+}
+
+@media (max-width: 767px) {
+    /*======= Unique Devices ======*/
+    #unique-device {
+        position: relative;
+        #big1 {
+            max-width: 250px;
+            width: auto;
+        }
+        #small1 {
+            max-width: 122px;
+            width: auto;
+            margin-top: 35px;
+        }
+    }
+}
+
+@media (max-width:400px) {
+    #unique-device {
+        #small1 {
+            margin-left: 5px;
+            width: 90px;
+            margin-top: 70px;
+        }
+    }
+}

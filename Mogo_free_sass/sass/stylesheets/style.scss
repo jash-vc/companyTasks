@@ -1,0 +1,26 @@
+// Fonts and Variables.
+@import 'abstracts/fonts';
+@import 'abstracts/variables';
+@import 'abstracts/font-awesome';
+// Vendors
+@import 'vendors/bootstrap4/bootstrap-min';
+//Slick Slider
+@import 'vendors/slick-slider/slick-theme';
+@import 'vendors/slick-slider/slick';
+// Basic.
+@import 'common/basic';
+//Components Css
+@import 'components/header';
+@import 'components/banner';
+@import 'components/about-us';
+@import 'components/stats';
+@import 'components/work-with';
+@import 'components/all-devices';
+@import 'components/service';
+@import 'components/team';
+@import 'components/logo';
+@import 'components/multiple-images';
+@import 'components/what-people-say';
+@import 'components/blog';
+@import 'components/map';
+@import 'components/footer';

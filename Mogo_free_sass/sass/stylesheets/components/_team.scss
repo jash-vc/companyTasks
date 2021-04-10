@@ -1,0 +1,88 @@
+/*=============== Who We are ==================*/
+
+#team {
+    .cursive-title {
+        font-family: $font-Kaushan;
+    }
+    .hdivide2 {
+        height: 2%;
+        width: 8%;
+        display: inline-flex;
+        border-top: 3px solid $color-red;
+    }
+    .team-box {
+        position: relative;
+        transition: all .75s ease-in-out;
+        img {
+            border: none;
+            max-width: 100%;
+        }
+        .overlay-team {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: all 1s ease-in-out;
+            background: linear-gradient(0deg, $overlay-back1 0%, $color-common2 100%);
+            .overlay-text-team {
+                color: $color-white;
+                font-size: 20px;
+                font-weight: 700;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                .team-icon {
+                    display: inline-block;
+                    font-size: 25px;
+                    color: $color-common2;
+                    background: $know-team-back;
+                    padding: 5px;
+                    line-height: 100%;
+                    width: 20%;
+                    &:hover {
+                        color: $color-white;
+                        background: $color-common2;
+                    }
+                }
+            }
+        }
+        &:hover {
+            transform: translateX(-5%) translateY(-5%);
+            opacity: 0.7;
+            .overlay-team {
+                opacity: 0.91;
+                box-shadow: 15px 15px $color-common;
+            }
+        }
+    }
+    .know-team {
+        p {
+            font-weight: 500;
+            font-size: 14px;
+            padding: 0;
+        }
+        span {
+            font-size: 14px;
+            color: $accordian-arrow;
+            font-weight: 300;
+            font-style: italic;
+            font-family: "Roboto";
+            text-align: center;
+        }
+    }
+    // .image {
+    //     display: block;
+    //     width: 100%;
+    //     height: auto;
+    // }
+}
+
+@media (max-width: 767px) {
+    @media (max-width: 400px) {}
+}

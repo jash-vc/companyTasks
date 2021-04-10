@@ -1,0 +1,73 @@
+/*============== About Us =================*/
+
+#about-us {
+    .cursive-title {
+        font-family: $font-Kaushan;
+        font-size: 15pt;
+    }
+    .hdivide2 {
+        height: 2%;
+        width: 8%;
+        display: inline-flex;
+        border-top: 3px solid $color-red;
+    }
+    .image-gradiant {
+        .hoverbox {
+            position: relative;
+            border: none;
+            max-width: 100%;
+            transition: all .75s ease-in-out;
+            .overlay {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                opacity: 0;
+                transition: all .75s ease-in-out;
+                background: linear-gradient(0deg, $overlay-back1 0%, $color-common2 100%);
+                .overlay-text {
+                    color: $color-white;
+                    font-size: 25px;
+                    font-weight: 700;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                }
+            }
+            &:hover {
+                transform: translateX(-5%) translateY(-5%);
+                opacity: 0.7;
+                .overlay {
+                    opacity: 0.91;
+                    box-shadow: 15px 15px $color-common;
+                }
+            }
+        }
+    }
+}
+
+
+/*========== Hover Effect ===============
+========================*/
+
+.image {
+    display: block;
+    height: auto;
+}
+
+@media (max-width: 767px) {
+    #about-us {
+        .image-gradiant {
+            .hoverbox {
+                img {
+                    width: auto;
+                    max-width: 100%;
+                    margin: 10px 0;
+                }
+            }
+        }
+    }
+}

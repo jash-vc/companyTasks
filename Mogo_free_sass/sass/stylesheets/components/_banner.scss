@@ -1,0 +1,167 @@
+/*============== Banner Section =================*/
+
+#banner {
+    background: url("../images/banner.png") no-repeat center center / cover;
+    padding: 80px 0 0 0;
+    .sliderContainer {
+        position: relative;
+        .heading {
+            .banner-sectionHeading {
+                font-weight: 700;
+                font-size: 110px;
+                color: $color-white;
+                text-transform: uppercase;
+                line-height: 1;
+                position: relative;
+                padding-bottom: 20px;
+                margin-bottom: 30px;
+                text-align: center;
+                .banner-subHeading {
+                    display: block;
+                    text-transform: none;
+                    font-weight: 400;
+                    font-family: $font-Kaushan;
+                    font-size: 50px;
+                    margin-bottom: 20px;
+                }
+                &:after {
+                    background: $color-white;
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    width: 50px;
+                    height: 2px;
+                    background: $color-common2;
+                    transform: translateX(-50%);
+                }
+            }
+            .banner-btn {
+                display: inline-block;
+                color: $color-white;
+                text-transform: uppercase;
+                font-weight: 700;
+                padding: 10px 20px;
+                text-align: center;
+                border: 3px solid $color-white;
+                font-size: 12px;
+                line-height: 100%;
+                transition: all .75s ease-in-out;
+                &:hover {
+                    transform: translateY(-5px);
+                    color: $color-yellow;
+                    background-color: $color-common2;
+                }
+            }
+        }
+    }
+    .item {
+        .hash {
+            font-size: 18px;
+        }
+        .hash-name {
+            font-size: 15px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+/* Here for Carousel  */
+
+h3 {
+    margin: 5px 0;
+}
+
+.slick-slide {
+    color: $color-white;
+    padding: 0px 0 120px;
+    text-align: center;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: $color-black;
+}
+
+.progressBarContainer {
+    position: absolute;
+    bottom: 20px;
+    min-width: 100%;
+    width: auto;
+}
+
+.progressBarContainer div {
+    display: block;
+    width: 21%;
+    cursor: pointer;
+    margin-right: 5%;
+    float: left;
+    color: $color-white;
+}
+
+.progressBarContainer div:last-child {
+    margin-right: 0;
+}
+
+.progressBarContainer div span.progressBar {
+    width: 100%;
+    height: 4px;
+    background-color: $stats-box;
+    display: block;
+}
+
+.progressBarContainer {
+    div {
+        span {
+            &.progressBar {
+                .inProgress {
+                    background-color: $color-common2;
+                    width: 0%;
+                    height: 4px;
+                }
+            }
+        }
+    }
+}
+
+
+/*===== Banner Section =====*/
+
+@media (max-width: 767px) {
+    #banner {
+        padding: 20px 0 0 0;
+        .sliderContainer {
+            .heading {
+                .banner-sectionHeading {
+                    font-size: 60px;
+                    padding-bottom: 10px;
+                    margin-bottom: 10px;
+                    text-align: center;
+                }
+            }
+            .item {
+                .hash {
+                    font-size: 12px;
+                }
+                .hash-name {
+                    font-size: 8px;
+                }
+            }
+        }
+    }
+    @media (max-width: 400px) {
+        #banner {
+            .sliderContainer {
+                .heading {
+                    .banner-sectionHeading {
+                        font-size: 45px;
+                        .banner-subHeading {
+                            font-size: 22px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

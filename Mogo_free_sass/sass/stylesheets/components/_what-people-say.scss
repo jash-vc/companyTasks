@@ -1,0 +1,53 @@
+/*==================== What People Say ===============*/
+
+#people-say {
+    background: url("../images/bg-happy-client.jpg") no-repeat center center / cover;
+    width: auto;
+    min-height: 600px;
+    height: auto;
+    margin-bottom: 50px;
+    .cursive-title {
+        font-family: $font-Kaushan;
+    }
+    .hdivide2 {
+        height: 2%;
+        width: 8%;
+        display: inline-flex;
+        border-top: 3px solid $color-red;
+    }
+    .set {
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+    .review {
+        padding: 0px;
+        p {
+            &:first-child {
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+        }
+        .pos {
+            font-size: 13px;
+            line-height: 24px;
+            color: $review-color;
+            font-weight: 300;
+            font-style: italic;
+            font-family: "Roboto";
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    /*==================== What People Say ===============*/
+    #people-say {
+        .review {
+            padding: 15px;
+            .pos {
+                font-size: 12px;
+                line-height: 24px;
+                font-family: "Roboto";
+            }
+        }
+    }
+}

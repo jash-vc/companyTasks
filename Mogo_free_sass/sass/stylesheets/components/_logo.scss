@@ -1,0 +1,35 @@
+/*=================== Brand Logo ================*/
+
+#logo {
+    background-color: $slider-back;
+    padding: 30px 0;
+    .row {
+        box-align: center;
+        -webkit-box-align: center;
+        flex-wrap: wrap;
+        .brand-logo {
+            img {
+                transition: 0.3s all ease-in-out;
+                border: none;
+                max-width: 100%;
+                box-align: center;
+                -webkit-box-align: center;
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    #logo {
+        .brand-logo {
+            img {
+                transition: 0.3s all ease-in-out;
+                border: none;
+                max-width: 100%;
+            }
+        }
+    }
+}

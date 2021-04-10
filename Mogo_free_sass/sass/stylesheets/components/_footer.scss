@@ -1,0 +1,178 @@
+    /*============ Footer ============ */
+    
+    #footer {
+        .about {
+            img {
+                margin-bottom: 20px;
+                margin-left: 5px;
+            }
+            span {
+                font-weight: 600;
+                margin-left: 5px;
+            }
+            .social-nw {
+                a {
+                    i {
+                        display: inline-block;
+                        margin: 0 3px;
+                        font-size: 18px;
+                        color: $color-common;
+                    }
+                }
+                p {
+                    font-style: italic;
+                    font-weight: 300;
+                    display: inline-block;
+                    margin-right: 10px;
+                }
+            }
+            .input-grp {
+                position: relative;
+                display: table;
+                border-collapse: separate;
+                 ::placeholder {
+                    font-style: italic;
+                    font-size: 13px;
+                    text-align: left;
+                }
+                input {
+                    border-color: $color-input;
+                    box-shadow: none;
+                    font-style: italic;
+                    font-size: 15px;
+                }
+                .input-group-btn {
+                    position: relative;
+                    font-size: 0;
+                    white-space: nowrap;
+                    width: 1%;
+                    white-space: nowrap;
+                    vertical-align: middle;
+                    .subscribe {
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        font-family: 'Montserrat', sans-serif;
+                        font-size: 14px;
+                        background: $color-common;
+                        color: $color-white;
+                        border: none;
+                        padding: 1px 5px;
+                    }
+                }
+            }
+        }
+        .b-head {
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 300;
+            margin-left: 10px;
+        }
+        .footer-images {
+            img {
+                max-width: 120px;
+                margin-right: 15px;
+            }
+        }
+        .content {
+            font-size: 12px;
+            margin: 0 0 5px;
+            line-height: 1.4;
+            box-sizing: border-box;
+            padding-left: 30px;
+            p {
+                color: $color-black;
+                text-transform: uppercase;
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 1.4;
+            }
+            .bdate {
+                color: $color-black;
+                font-size: 12px;
+                font-style: italic;
+                margin-top: -10px;
+            }
+        }
+        .instagram {
+            .head-insta {
+                font-size: 14px;
+                text-transform: uppercase;
+                font-weight: 300;
+            }
+            .insta-images {
+                a {
+                    margin: 0px;
+                    padding: 0px;
+                    img {
+                        margin: 0 !important;
+                        border: none;
+                    }
+                }
+            }
+        }
+        .footer-copyright {
+            font-size: 12px;
+            font-weight: 600;
+        }
+    }
+    
+    @media (max-width: 767px) {
+        /*==================== Footer ===============*/
+        #footer {
+            .about {
+                img {
+                    margin-left: 35%;
+                }
+                span {
+                    font-size: 14px;
+                    margin: 0;
+                }
+                .social-nw {
+                    p {
+                        margin-right: 10px;
+                        margin-top: 5px;
+                    }
+                }
+                form {
+                    text-align: center;
+                }
+            }
+            .second-foo-div {
+                justify-content: center;
+            }
+            .content {
+                float: right;
+                .bdate {
+                    justify-content: center;
+                    display: flex;
+                }
+            }
+            .footer-images {
+                justify-content: center;
+                display: flex;
+            }
+            .instagram {
+                .head-insta {
+                    display: flex;
+                    justify-content: center;
+                }
+                .insta-images {
+                    justify-content: center;
+                    display: flex;
+                    flex-wrap: wrap;
+                    & :last-child {
+                        margin: 2% 0;
+                    }
+                }
+                @media (max-width: 400px) {
+                    #footer {
+                        .instagram {
+                            .insta-images {
+                                margin: 5px 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
