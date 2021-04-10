@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "_variables.scss";
+@import "_basic.scss";
+@import "_font-awesome.scss";
+@import "_bootstrap.min.scss";
+@import "_googleFonts.scss";
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

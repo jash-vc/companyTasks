@@ -1,0 +1,87 @@
+@import "_googleFonts.scss";
+html,
+body {
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    font-family: $font-lato;
+}
+
+article,
+section,
+div {
+    display: block;
+}
+
+h1 {
+    font-size: 30pt;
+}
+
+h2 {
+    font-size: 26pt;
+}
+
+h3 {
+    font-size: 24pt;
+}
+
+h4 {
+    font-size: 20pt;
+}
+
+h5 {
+    font-size: 15pt;
+}
+
+p,
+a {
+    font-size: 12pt;
+    font-family: $font-lato;
+}
+
+.bold-text {
+    font-weight: 700;
+}
+
+.varela-font {
+    font-family: $font-Varela;
+}
+
+.lato-font {
+    font-family: $font-lato;
+}
+
+
+/* Default Margin and Padding */
+
+.mr-top {
+    margin-top: 5%;
+}
+
+.mr-bottom {
+    margin-top: 2%;
+}
+
+.p-top {
+    padding-top: 2%;
+}
+
+.p-bottom {
+    padding-bottom: 2%;
+}
+
+.common-btn {
+    padding: 5px 20px;
+    border-radius: 20px;
+    color: $black;
+    border: 1px solid $black;
+    background-color: $white;
+    transition: all 1.2s;
+}
+
+.gbtn {
+    padding: 5px 20px;
+    border-radius: 20px;
+    background-color: $custom-blue;
+    color: $white;
+}

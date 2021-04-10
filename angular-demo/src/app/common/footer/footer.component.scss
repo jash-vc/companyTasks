@@ -1,0 +1,77 @@
+//Footer Starts
+#footer {
+    color: #8c8f94;
+    font-size: 16px;
+    .footer-container {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .copyright-container {
+        padding-top: 20px;
+        padding-bottom: 25px;
+    }
+    .logo {
+        margin-bottom: 36px;
+    }
+    p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .app_download {
+        img {
+            margin-top: 6px;
+        }
+    }
+    ul {
+        li {
+            .title {
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                color: #26272d;
+                font-size: 12px;
+            }
+            a {
+                color: #8c8f94;
+                text-decoration: none;
+                line-height: 36px;
+                &:hover {
+                    color: #26272d;
+                }
+            }
+        }
+    }
+    .socials {
+        margin-top: 32px;
+        padding: 0;
+        li {
+            display: inline-block;
+            font-size: 20px;
+            margin-right: 20px;
+            a {
+                color: rgba(19, 19, 21, 0.3);
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    .more-info {
+        line-height: 24px;
+        font-size: 14px;
+    }
+    .made-by {
+        font-size: 9px;
+        font-weight: 700;
+        line-height: 22px;
+        color: #26272d;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        a {
+            img {
+                margin-top: -8px;
+                margin-left: 8px;
+            }
+        }
+    }
+}

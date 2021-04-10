@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="my-form">
+        <div class="row d-flex justify-content-center">
+            <h2>Contact Us</h2>
+        </div>
+        <div class="form-fields">
+            <mat-form-field appearance="fill" class="custom-input">
+                <mat-label>Your Name</mat-label>
+                <input matInput placeholder="Your Name">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="custom-input">
+                <mat-label>Last Name</mat-label>
+                <input matInput placeholder="Last Name">
+            </mat-form-field>
+
+            <!-- Dropdown starts  -->
+            <mat-form-field appearance="fill" class="custom-input">
+                <mat-label>Select Choice</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let choice of choices" [value]="choice.value">
+                        {{choice.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <!-- Dropdown Ends -->
+
+            <mat-form-field appearance="fill" class="custom-input">
+                <mat-label>Email address</mat-label>
+                <input matInput placeholder="Email address">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" class="custom-input">
+                <mat-label>Phone Number</mat-label>
+                <input matInput placeholder="Phone Number">
+            </mat-form-field>
+
+            <!-- Radio Button Group -->
+            <div class="radio-grp">
+                <mat-radio-group aria-label="Gender">
+                    <mat-radio-button value="male">Male</mat-radio-button>
+                    <mat-radio-button value="female">Female</mat-radio-button>
+                </mat-radio-group>
+            </div>
+            <!-- Radio Group Ends -->
+            <mat-form-field appearance="fill" class="custom-input text-area">
+                <mat-label>Message</mat-label>
+                <textarea matInput rows="7"></textarea>
+            </mat-form-field>
+            <div class="btn">
+                <button mat-raised-button color="primary" class="custom-button">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+::ng-deep body {
+    background-color: rgba($color: #f2f2f2, $alpha: 1.0);
+}
+
+div {
+    display: block;
+    margin-bottom: 5px;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: -10px;
+    font-size: 20pt;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-fields {
+    padding: 3% 4%;
+    width: 700px;
+    margin: 2% 19%;
+    border-radius: 15px;
+    background: #ffffff;
+    .custom-input {
+        width: 100%;
+        border-radius: 5px;
+        border-bottom: none;
+    }
+    .text-area {
+        height: 10px;
+    }
+    textarea.mat-input-element {
+        resize: unset;
+        overflow: hidden;
+    }
+    .mat-radio-button~.mat-radio-button {
+        margin-left: 16px;
+    }
+    .radio-grp {
+        padding: 5px 0px;
+        label {
+            display: block;
+        }
+    }
+    .btn {
+        margin-top: 3%;
+        margin-bottom: -3%;
+        .custom-button {
+            padding: 5px 30px;
+            border-radius: 50px;
+            background-color: #267df4;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+}
