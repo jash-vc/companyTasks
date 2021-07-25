@@ -75,7 +75,7 @@ export default function ScrollableTabsButtonAuto() {
   return (
     <div className={classes.root}>
       <Header/>
-      <Paper elevation = {2} className = { classes.paperContainer}>      
+      <Paper elevation = {2} className = {classes.paperContainer}>      
         <Tabs
               value={value}
               onChange={handleChange}

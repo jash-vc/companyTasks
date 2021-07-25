@@ -1,10 +1,10 @@
 import React from 'react';
-import {
-    makeStyles,
-  } from '@material-ui/core/styles';
-  import InputAdornment from '@material-ui/core/InputAdornment';
-  import TextField from '@material-ui/core/TextField';
-  import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import TextField from '@material-ui/core/TextField';
+import Grid from '@material-ui/core/Grid';
+import { Link } from 'react-router-dom';
+import { grey } from '@material-ui/core/colors';
 
 const useStyles = makeStyles((theme) => ({
     outerWrapper: {
@@ -39,12 +39,26 @@ const useStyles = makeStyles((theme) => ({
             oultline: "none",
         }
     },
+    buttonWrapper:{
+        marginTop:20,
+        display:"flex",
+        justifyContent:"space-evenly",
+        "& a":{
+            textTransform:"Capitalize",
+            textDecoration:"none",
+            color: grey[900],
+            backgroundColor: "#22d3ee",
+            padding:"8px 20px",
+            borderRadius:25,
+            fontWeight:600
+        }
+    }
 }));
 
 export default function Shipping() {
     const classes = useStyles();
     return(
-        <React.Fragment>
+        // <React.Fragment>
             <div className={classes.outerWrapper} >
                 <Grid container xs = {12} className = {classes.gridContainer}>
                     <Grid item xs={4}>
@@ -92,9 +106,11 @@ export default function Shipping() {
                             startAdornment: <InputAdornment position="start">$</InputAdornment>,
                     }}
                 />
-            </div>
-      
-        </React.Fragment>
+                <div className={classes.buttonWrapper}>
+                    <Link to="/table">Go to Table</Link>
+                    <Link to="/card">Go to Cards</Link>
+                </div>
+            </div>      
+        // </React.Fragment>
     );
-
 }

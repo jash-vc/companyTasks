@@ -4,7 +4,22 @@ import TextField from '@material-ui/core/TextField';
 import InputAdornment from '@material-ui/core/InputAdornment';
 
 const useStyles = makeStyles((theme) => ({
-
+    outerWrapper: {
+        borderRadius: "20px",
+        padding:"2%",
+    },
+    fieldStyle: {
+        backgroundColor: "white",
+        color: "black",
+        margin: "1%",
+        width: "90%",
+        '&:hover': {
+            oultline: "none",
+        },
+        '&:focus': {
+            oultline: "none",
+        }
+    },
 }));
 
 export default function Pricing() {
