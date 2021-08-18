@@ -12,46 +12,48 @@ import UserLogo from "../assets/images/placeholder.jpg";
 
 export default function Sidebar(){
     return(
-        <div className="sidebarWrapper position-fixed py-20 border-round-5 d-flex flex-column justify-content-between align-items-center">
-            <div className="upperdeck">
-                <div className="logoWrapper pb-20 w-100 d-flex align-items-center justify-content-center flex-column">
-                    <img src={Logo} alt="logo"/>
+        <aside className="sidebarWrapper py-20 border-round-5 d-inline-block">
+            <div className="sidebar d-flex flex-column justify-content-between align-items-center">
+                <div className="upperdeck">
+                    <div className="logoWrapper pb-20 w-100 d-flex align-items-center justify-content-center flex-column">
+                        <img src={Logo} alt="logo"/>
+                    </div>
+                    <div className="py-25 d-flex align-items-center justify-content-center flex-wrap">
+                        <SidebarItem
+                            path="/"
+                            exact="/"
+                            itemName="Dashboard"
+                            icon={<DashboardIcon />}
+                        />
+                        <SidebarItem
+                            path="/explore"
+                            itemName="Explore"
+                            icon={<ExploreIcon />}
+                        />
+                        <SidebarItem
+                            path="/room"
+                            itemName="My Room"
+                            icon={<RoomIcon />}
+                        />
+                        <SidebarItem
+                            path="/social"
+                            itemName="Social"
+                            icon={<SocialIcon />}
+                        />
+                        <SidebarItem
+                            path="/settings"
+                            itemName="Settings"
+                            icon={<SettingsIcon />}
+                        />
+                    </div>
                 </div>
-                <div className="py-25 d-flex align-items-center justify-content-center flex-wrap">
-                    <SidebarItem
-                        path="/"
-                        exact="/"
-                        itemName="Dashboard"
-                        icon={<DashboardIcon />}
-                    />
-                    <SidebarItem
-                        path="/explore"
-                        itemName="Explore"
-                        icon={<ExploreIcon />}
-                    />
-                    <SidebarItem
-                        path="/room"
-                        itemName="My Room"
-                        icon={<RoomIcon />}
-                    />
-                    <SidebarItem
-                        path="/social"
-                        itemName="Social"
-                        icon={<SocialIcon />}
-                    />
-                    <SidebarItem
-                        path="/settings"
-                        itemName="Settings"
-                        icon={<SettingsIcon />}
-                    />
+                <div className="lowerdeck">
+                    <div className="profileWrapper border-round-20">
+                        <img src={UserLogo} alt="user" className="w-100 border-round-20 pb-1"/>
+                    </div>
+                    <p className="text-white fs-14 text-center mt-1 my-0">Profile</p>
                 </div>
             </div>
-            <div className="lowerdeck">
-                <div className="profileWrapper border-round-20">
-                    <img src={UserLogo} alt="user" className="w-100 border-round-20 pb-1"/>
-                    <p className="text-white fs-14 text-center">Profile</p>
-                </div>
-            </div>
-        </div>
+        </aside>
     );
 }

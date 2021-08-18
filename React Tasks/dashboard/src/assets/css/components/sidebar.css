@@ -1,12 +1,15 @@
-.logoWrapper {
-    border-bottom: 2px solid rgba(72, 99, 240, 0.3);
-}
 .sidebarWrapper {
-    width: 137px;
-    height: 93%;
+    flex: 0 0 137px;
+    height:calc(100vh - 40px);
     background-color: #182040;
     backdrop-filter: blur(30px);
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+.sidebar {
+    height: 100%;
+}
+.logoWrapper {
+    border-bottom: 2px solid rgba(72, 99, 240, 0.3);
 }
 .item:last-child {
     margin-bottom: 0;
@@ -24,8 +27,7 @@
     width: 28px;
     height: 26px;
 }
-.item .iconWrap .sidebarIcon,
-.item .iconWrap .sidebarIcon,svg {
+.item .iconWrap .sidebarIcon svg {
     width:100%;
     fill:#fff;
 }
