@@ -1,0 +1,24 @@
+.mainContainer{
+    flex: 1 0 calc(100% - 530px);
+    padding: 30px;
+    background: rgba(54,60,89,.6);
+    border-radius: 8px;
+}
+.heading {
+    padding-right: 20px;
+    position: relative;
+}
+.heading::after {
+    position:absolute;
+    border-left: 3px solid #bbb;
+    content:" ";
+    height:20px;
+    right:0;
+    top:4px;
+}
+.tabContentContainer {
+    padding-top: 15px;
+    /* overflow: hidden;
+    overflow-y: auto; */
+    height: calc(100% - 100px);
+}
