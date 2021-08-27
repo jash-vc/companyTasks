@@ -2,6 +2,8 @@
 ::after,
 ::before {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 /* Font Sizes */
@@ -11,8 +13,14 @@
 .fs-14 {
     font-size: 14px;
 }
+.fs-18 {
+    font-size: 18px;
+}
 .fs-20 {
     font-size: 20px;
+}
+.fs-24 {
+    font-size: 24px;
 }
 /* font weight */
 .fw-400{
@@ -57,7 +65,7 @@
     padding: 5px 0;
     margin-right: 20px;
     color:#fff;
-    font-size: 14px;
+    font-size: 18px;
     cursor: pointer;
 }
 .nav-tabs .nav-link:hover{

@@ -36,6 +36,9 @@
     margin: 0 16px 15px 0;
     cursor: pointer;
 }
+/* .midbarItem:last-child {
+    margin-bottom: 0;
+} */
 .imgWrapper {
     border-radius: 3px 0 0 3px;
     overflow: hidden;

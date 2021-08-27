@@ -9,7 +9,6 @@ import { ReactComponent as SettingsIcon } from "../assets/images/svg/settings.sv
 import Logo from "../assets/images/svg/logo-white.svg";
 import UserLogo from "../assets/images/placeholder.jpg";
 
-
 export default function Sidebar(){
     return(
         <aside className="sidebarWrapper py-20 border-round-5 d-inline-block">
