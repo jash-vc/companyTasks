@@ -28,7 +28,7 @@ export default class Conditional extends Component {
       contact: this.state.contact,
       status: this.state.status,
     };
-    console.log(Data.status);
+    // console.log(Data.status);
     if (Data.status === "pending") {
       const actionDecline = <button className="btn btn-danger">Decline</button>;
       const actionAccept = (
@@ -42,12 +42,17 @@ export default class Conditional extends Component {
       );
       Data.action = Wrapper;
     } else if (Data.status === "accept") {
-      Data.action = "Accepted";
+      const actionDecline = <button className="btn btn-danger">Decline</button>;
+      const Wrapper = <>{actionDecline}</>;
+      Data.action = Wrapper;
     } else {
-      Data.action = "Declined";
+      const actionAccept = <button className="btn btn-success">Accept</button>;
+      const Wrapper = <>{actionAccept}</>;
+      Data.action = Wrapper;
     }
-    delete Data.status;
-    this.setState({ formData: this.state.formData.concat(Data) });
+    Data.status = Data.status.toUpperCase();
+    this.setState({ formData: [...this.state.formData, Data] });
+    this.setState({ show: true });
     event.preventDefault();
   }
   render() {
@@ -96,25 +101,34 @@ export default class Conditional extends Component {
               <option value="declined">Declined</option>
             </Input>
           </FormGroup>
-          <Input type="submit" value="Submit" />
+          <button
+            className="btn btn-success w-100 text-center"
+            type="submit"
+            value="Submit"
+          >
+            Submit
+          </button>
         </Form>
-        <table>
-          <thead>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Contact</th>
-            <th>Actions</th>
-          </thead>
-          <tbody>
-            {this.state.formData.map((item) => (
-              <tr key={item.id}>
-                {Object.values(item).map((val) => (
-                  <td>{val}</td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        {this.state.show && (
+          <table>
+            <thead>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Contact</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </thead>
+            <tbody>
+              {this.state.formData.map((item) => (
+                <tr key={item.id}>
+                  {Object.values(item).map((val) => (
+                    <td>{val}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
       </>
     );
   }

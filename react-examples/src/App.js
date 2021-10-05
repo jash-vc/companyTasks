@@ -4,6 +4,7 @@ import Example2 from "./Example2";
 import Example3 from "./Example3";
 import FormValidation from "./FormValidation";
 import Welcome from "./Welcome";
+import Conditional from "./Conditional";
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
         <Example3/>
       <h3 style={{backgroundColor:"black", color:"white"}}>Example:4 Welcome User</h3>
         <Welcome name="Name"/> */}
-      <FormValidation />
+      {/* <FormValidation /> */}
+      <Conditional />
     </div>
   );
 }

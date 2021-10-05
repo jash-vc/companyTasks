@@ -39,7 +39,6 @@ export default function Midbar() {
           class="search-input font-14 form-control w-100"
         />
         <i class="searchIconWrapper position-absolute">
-          
           <SearchIcon />
         </i>
       </div>
@@ -47,7 +46,7 @@ export default function Midbar() {
         <p className="text-white fs-20 m-0"> Explore </p>
         <Button className="roundIconButton"> </Button>
       </div>
-      <CustomScrollbar autoHeight autoHeightMax={"calc(100vh - 125px)"} >
+      <CustomScrollbar autoHeight autoHeightMax={"calc(100vh - 125px)"}>
         <List type="unstyled">
           <li className="midbarItem d-flex">
             <div className="imgWrapper">
@@ -55,7 +54,10 @@ export default function Midbar() {
             </div>
             <div className="contentWrapper">
               <p className="fs-14 text-white fw-700 mb-1"> Assassin 's Creed</p>
-              <p className="fs-12 text-white mb-1"> Galaxy Entertainment Ltd. </p>
+              <p className="fs-12 text-white mb-1">
+                {" "}
+                Galaxy Entertainment Ltd.{" "}
+              </p>
               <Badge className="fs-12 mb-2"> Game </Badge>
               <div className="iconsWrapper d-flex">
                 <div className="userType">
@@ -68,16 +70,18 @@ export default function Midbar() {
               </div>
             </div>
           </li>
-          
+
           <li className="midbarItem d-flex">
             <div className="imgWrapper">
               <img src={ListImage} alt="list" />
             </div>
             <div className="contentWrapper">
               <p className="fs-14 text-white fw-700 mb-1"> Assassin 's Creed</p>
-              <p className="fs-12 text-white mb-1"> Galaxy Entertainment Ltd. </p>
+              <p className="fs-12 text-white mb-1">
+                {" "}
+                Galaxy Entertainment Ltd.{" "}
+              </p>
               <Badge green greenborder greenShadow className="fs-12 mb-2">
-                
                 Game
               </Badge>
               <div className="iconsWrapper d-flex">
@@ -97,9 +101,11 @@ export default function Midbar() {
             </div>
             <div className="contentWrapper">
               <p className="fs-14 text-white fw-700 mb-1"> Assassin 's Creed</p>
-              <p className="fs-12 text-white mb-1"> Galaxy Entertainment Ltd. </p>
+              <p className="fs-12 text-white mb-1">
+                {" "}
+                Galaxy Entertainment Ltd.{" "}
+              </p>
               <Badge red redborder redShadow className="fs-12 mb-2">
-                
                 Game
               </Badge>
               <div className="iconsWrapper d-flex">
@@ -119,9 +125,11 @@ export default function Midbar() {
             </div>
             <div className="contentWrapper">
               <p className="fs-14 text-white fw-700 mb-1"> Assassin 's Creed</p>
-              <p className="fs-12 text-white mb-1"> Galaxy Entertainment Ltd. </p>
+              <p className="fs-12 text-white mb-1">
+                {" "}
+                Galaxy Entertainment Ltd.{" "}
+              </p>
               <Badge green greenborder greenShadow className="fs-12 mb-2">
-                
                 Game
               </Badge>
               <div className="iconsWrapper d-flex">
@@ -141,9 +149,11 @@ export default function Midbar() {
             </div>
             <div className="contentWrapper">
               <p className="fs-14 text-white fw-700 mb-1"> Assassin 's Creed</p>
-              <p className="fs-12 text-white mb-1"> Galaxy Entertainment Ltd. </p>
+              <p className="fs-12 text-white mb-1">
+                {" "}
+                Galaxy Entertainment Ltd.{" "}
+              </p>
               <Badge green greenborder greenShadow className="fs-12 mb-2">
-                
                 Game
               </Badge>
               <div className="iconsWrapper d-flex">
@@ -163,7 +173,10 @@ export default function Midbar() {
             </div>
             <div className="contentWrapper">
               <p className="fs-14 text-white fw-700 mb-1"> Assassin 's Creed</p>
-              <p className="fs-12 text-white mb-1"> Galaxy Entertainment Ltd. </p>
+              <p className="fs-12 text-white mb-1">
+                {" "}
+                Galaxy Entertainment Ltd.{" "}
+              </p>
               <Badge className="fs-12 mb-2"> Game </Badge>
               <div className="iconsWrapper d-flex">
                 <div className="userType">
@@ -182,7 +195,10 @@ export default function Midbar() {
             </div>
             <div className="contentWrapper">
               <p className="fs-14 text-white fw-700 mb-1"> Assassin 's Creed</p>
-              <p className="fs-12 text-white mb-1"> Galaxy Entertainment Ltd. </p>
+              <p className="fs-12 text-white mb-1">
+                {" "}
+                Galaxy Entertainment Ltd.{" "}
+              </p>
               <Badge className="fs-12 mb-2"> Game </Badge>
               <div className="iconsWrapper d-flex">
                 <div className="userType">
@@ -201,7 +217,10 @@ export default function Midbar() {
             </div>
             <div className="contentWrapper">
               <p className="fs-14 text-white fw-700 mb-1"> Assassin 's Creed</p>
-              <p className="fs-12 text-white mb-1"> Galaxy Entertainment Ltd. </p>
+              <p className="fs-12 text-white mb-1">
+                {" "}
+                Galaxy Entertainment Ltd.{" "}
+              </p>
               <Badge className="fs-12 mb-2"> Game </Badge>
               <div className="iconsWrapper d-flex">
                 <div className="userType">

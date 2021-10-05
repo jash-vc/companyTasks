@@ -1,10 +1,25 @@
-import React from "react";
+import React, { Component } from "react";
 
-export default function Heading(){
-    return(
-        <div className="headingWrapper text-white d-flex align-items-center mb-3">
-            <p className="m-0 fw-600 fs-24 heading ">Assasian's Creed</p>
-            <a href="www.google.com" target="_blank" className="px-3 fs-16">Viitorcloud Technologies Ltd.</a>
-        </div>
-    )
+export default class Heading extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { heading: "I am Zero" };
+    this.click = this.click.bind(this);
+  }
+  componentDidMount() {
+    this.setState({ heading: "i am mounted" });
+  }
+  click() {
+    this.setState({ heading: "i am Clicked" });
+  }
+  render() {
+    return (
+      <div>
+        <h2 onClick={this.click}>{this.state.heading}</h2>
+      </div>
+    );
+  }
 }
+Heading.defaultProps = {
+  heading: "I am Default",
+};
