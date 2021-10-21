@@ -1,38 +1,82 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.fc-blue {
+  color: #083f85;
+}
+
+.center {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mb-20 {
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  max-width: 1368px;
+  margin: auto;
+  padding: 0 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.pokemon-image {
+  width: 150px;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
   align-items: center;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 50%;
 }
 
-.App-link {
-  color: #61dafb;
+.pokemon-list {
+  height: 150px;
+  overflow-y: scroll;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pokemon-list li {
+  margin-bottom: 5px;
+}
+
+.pokemon-wrapper {
+  padding: 50px 200px;
+}
+
+.pokemon-wrapper .search-pokemon {
+  width: 100%;
+  margin: 10px 0;
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.pokemon-wrapper .about-pokemon {
+  padding: 50px 0;
+}
+
+.pokemon-list li button {
+  background-color: #083f85;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+}
+
+.pokemon-stat {
+  border: 10px solid #083f85cc;
+}
+
+.pokemon-stat,
+td {
+  padding: 8px;
+  text-align: left;
+  /* border-bottom: 1px solid #ddd; */
+  background-color: #5050cb;
 }
