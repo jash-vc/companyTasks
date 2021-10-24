@@ -6,12 +6,16 @@ function Home() {
   const [pokemons, setPokemons] = useState([]);
   const [pokemonInfo, setPokemonInfo] = useState([]);
   const [active, setActive] = useState(false);
+  const [color, setColor] = useState("");
 
   useEffect(() => {
     const url = "https://pokeapi.co/api/v2/pokemon";
     axios.get(url).then((response) => {
       setPokemons(response.data.results);
     });
+    let random = Math.floor(Math.random() * (3 - 0 + 1) + 0);
+    let colorsName = ["#d72631", "#a2d5c6", "#077b8a", "#5c3c92"];
+    setColor(colorsName[random]);
   }, []);
 
   function fetchPokemon(event, pokemon) {
@@ -45,6 +49,7 @@ function Home() {
           {active && (
             <div className="about-pokemon">
               <PokemonInfo
+                bgColor={color}
                 imgPath={pokemonInfo.sprites.front_default}
                 name={pokemonInfo.species.name}
                 hp={pokemonInfo.stats[0].base_stat}
@@ -54,6 +59,7 @@ function Home() {
                 specialDefense={pokemonInfo.stats[4].base_stat}
                 speed={pokemonInfo.stats[5].base_stat}
               />
+              <button name="select-pokemon">Select Pokemon</button>
             </div>
           )}
         </div>

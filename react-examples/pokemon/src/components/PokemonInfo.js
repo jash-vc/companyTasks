@@ -1,7 +1,4 @@
 import React from "react";
-let colors = Math.floor(Math.random() * (3 - 0 + 1) + 0);
-let colorsName = ["#d72631", "#a2d5c6", "#077b8a", "#5c3c92"];
-let color = colorsName[colors];
 
 function PokemonInfo({
   name,
@@ -16,11 +13,11 @@ function PokemonInfo({
 }) {
   return (
     <>
-      <figure className="pokemon-image mb-20" style={{ background: color }}>
+      <figure className="pokemon-image mb-20" style={{ background: bgColor }}>
         <img src={imgPath} alt={name} />
       </figure>
       <h2 className="fc-blue center mb-20">{name}</h2>
-      <table width="100%" className="pokemon-stat">
+      <table width="100%" className="pokemon-stat" cellspacing="10px">
         <tbody>
           <tr>
             <td>{hp} HP</td>
