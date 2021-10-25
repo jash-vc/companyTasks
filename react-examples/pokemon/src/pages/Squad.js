@@ -1,27 +1,42 @@
 import React, { useState } from "react";
-import Card from "../components/Card";
 
 function Squad({ data, onClose }) {
-  const [empty, setEmpty] = useState(false);
+  const [squad, setSquad] = useState(data);
+  function onClose(event, unique, index, modifiedData) {
+    console.log(index);
+    console.log(data[index]);
+    modifiedData = data.splice(index, 1);
+    console.log(modifiedData);
+  }
+  const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+  const bgColor = "#" + randomColor;
   return (
     <div className="squad-container">
       <h3 className="fc-blue center mb-20">Selected Squad</h3>
       <ul className="cards-container">
-        {data.map((unique, index) =>
-          true ? (
-            <li key={index}>
-              <Card
-                // show={empty}
-                onClose={onClose}
-                imgPath={unique.sprites.front_default}
-                name={unique.species.name.toUpperCase()}
-                ability={unique.abilities[0].ability.name}
-              />
-            </li>
-          ) : (
-            <h2>Hello</h2>
-          )
-        )}
+        {data.map((unique, index) => (
+          <li key={index}>
+            <div className="squad-card" style={{ background: bgColor }}>
+              <button
+                className="close"
+                onClick={(event) => onClose(event, unique, index)}
+              >
+                close
+              </button>
+              <figure
+                className="pokemon-image mb-20"
+                style={{ background: "#fff" }}
+              >
+                <img
+                  src={unique.sprites.front_default}
+                  alt={unique.species.name.toUpperCase()}
+                />
+              </figure>
+              <h3 className="fc-blue">{unique.species.name.toUpperCase()}</h3>
+              <p className="fs-16">{unique.abilities[0].ability.name}</p>
+            </div>
+          </li>
+        ))}
       </ul>
     </div>
   );
