@@ -11,10 +11,7 @@ function Home() {
   const [value, setValue] = useState("");
   const [disable, setDisable] = useState(false);
   const [btnmsg, setBtnmsg] = useState("Select Pokemon");
-  const [data, setData] = useState("");
-  function onClose(childData) {
-    setData(childData);
-  }
+
   useEffect(() => {
     const url = "https://pokeapi.co/api/v2/pokemon";
     axios.get(url).then((response) => {
@@ -28,6 +25,9 @@ function Home() {
       setActive(true);
     });
   }
+  // function handleClick(event, select, index) {
+  //   console.log(select[index]);
+  // }
   function selectPokemon(event) {
     setSelect([...select, pokemonInfo]);
     if (select.length > 3) {
@@ -41,9 +41,9 @@ function Home() {
   const updateQuery = (e) => {
     setValue(e.target.value);
   };
+
   return (
     <>
-      {data}
       <div className="container">
         <h1 className="fc-blue center">Select Pokemon</h1>
         <div className="pokemon-wrapper">
@@ -85,7 +85,7 @@ function Home() {
                   {btnmsg}
                 </button>
               </div>
-              <Squad data={select} onClose={onClose} />
+              <Squad data={select} />
             </>
           )}
         </div>
