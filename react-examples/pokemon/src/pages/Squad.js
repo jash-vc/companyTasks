@@ -1,14 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import Card from "../components/Card";
 
-function Squad({ data }) {
-  const [empty, setEmpty] = useState(false);
-
-  function onClose(event, unique, index, data) {
-    console.log(index);
-    data.splice(index, 1);
-    console.log(data);
-  }
+function Squad({ data, homeToSquad }) {
   return (
     <div className="squad-container">
       <h3 className="fc-blue center mb-20">Selected Squad</h3>
@@ -17,7 +10,7 @@ function Squad({ data }) {
           true ? (
             <li key={index}>
               <Card
-                onClose={(event) => onClose(event, unique, index, data)}
+                onClose={() => homeToSquad(unique, data, index)}
                 imgPath={unique.sprites.front_default}
                 name={unique.species.name.toUpperCase()}
                 ability={unique.abilities[0].ability.name}

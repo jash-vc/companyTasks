@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import PokemonInfo from "../components/PokemonInfo";
 import Squad from "./Squad";
+import AutoComplete from "../components/AutoComplete";
 
 function Home() {
   const [pokemons, setPokemons] = useState([]);
@@ -11,6 +12,7 @@ function Home() {
   const [value, setValue] = useState("");
   const [disable, setDisable] = useState(false);
   const [btnmsg, setBtnmsg] = useState("Select Pokemon");
+  const [arr, setArr] = useState([]);
 
   useEffect(() => {
     const url = "https://pokeapi.co/api/v2/pokemon";
@@ -25,9 +27,6 @@ function Home() {
       setActive(true);
     });
   }
-  // function handleClick(event, select, index) {
-  //   console.log(select[index]);
-  // }
   function selectPokemon(event) {
     setSelect([...select, pokemonInfo]);
     if (select.length > 3) {
@@ -38,32 +37,33 @@ function Home() {
       setDisable(disable);
     }
   }
-  const updateQuery = (e) => {
-    setValue(e.target.value);
+  // Manipulate Data from Child to Parent
+  const homeToSquad = (unique, data) => {
+    const arr = data.filter((item) => item !== unique);
+    setSelect(arr);
+    if (select.length > 3) {
+      setDisable(false);
+      setBtnmsg("Select Pokemon");
+    }
   };
-
+  let showNames = (
+    <ul className="pokemon-list" extradata={value}>
+      {pokemons.map((pokemon, index) => (
+        <li key={index}>
+          <button onClick={(event) => fetchPokemon(event, pokemon)}>
+            {pokemon.name}
+          </button>
+        </li>
+      ))}
+    </ul>
+  );
   return (
     <>
       <div className="container">
         <h1 className="fc-blue center">Select Pokemon</h1>
         <div className="pokemon-wrapper">
-          <input
-            type="text"
-            name="search"
-            placeholder="Search Pokemon"
-            className="search-pokemon"
-            value={value}
-            onChange={updateQuery}
-          />
-          <ul className="pokemon-list" extradata={value}>
-            {pokemons.map((pokemon, index) => (
-              <li key={index}>
-                <button onClick={(event) => fetchPokemon(event, pokemon)}>
-                  {pokemon.name}
-                </button>
-              </li>
-            ))}
-          </ul>
+          <AutoComplete />
+          {showNames}
           {active && (
             <>
               <div className="about-pokemon">
@@ -85,7 +85,7 @@ function Home() {
                   {btnmsg}
                 </button>
               </div>
-              <Squad data={select} />
+              <Squad data={select} homeToSquad={homeToSquad} />
             </>
           )}
         </div>
